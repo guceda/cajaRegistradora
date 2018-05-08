@@ -32,10 +32,10 @@ export class AppComponent {
       new Producto('cocacola', '2', '🥤', 'bebida'),
       new Producto('cerveza', '9', '🍺', 'bebida'),
       new Producto('cocktail', '30', '🍹', 'bebida'),
-      // [new Producto('café', '3', '☕', 'bebida')],
-      // [new Producto('leche', '1', '🥛', 'bebida')],
-      // [new Producto('té', '3', '🍵', 'bebida')],
-      // [new Producto('martini', '14', '🍸', 'bebida')]
+      new Producto('café', '3', '☕', 'bebida'),
+      new Producto('leche', '1', '🥛', 'bebida'),
+      new Producto('té', '3', '🍵', 'bebida'),
+      new Producto('martini', '14', '🍸', 'bebida')
     ]
     this.postre = [
       new Producto('chocolate', '5', '🍫', 'bebida'),
@@ -45,7 +45,7 @@ export class AppComponent {
       new Producto('galleta', '3', '🥠', 'bebida'),
       new Producto('flan', '2', '🍮', 'bebida'),
       new Producto('caramelo', '3', '🍬', 'bebida'),
-      // [new Producto('cookie', '4', '🍪', 'bebida')]
+      new Producto('cookie', '4', '🍪', 'bebida')
     ]
     this.listaProductos = []
   }

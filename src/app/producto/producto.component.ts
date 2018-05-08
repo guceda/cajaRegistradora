@@ -11,7 +11,6 @@ export class ProductoComponent implements OnInit {
   @Input()producto:Producto
   @Output()onSend: EventEmitter<any>
 
-
   constructor() {
     this.onSend = new EventEmitter()
   }

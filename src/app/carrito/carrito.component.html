@@ -6,17 +6,17 @@
     </div>
     <div class="producto1 row justify-content-between">
         <div class="col-3"><div *ngFor = "let p of listaCompra">{{p.nombre}}</div></div>
-        <div class="col-1"><div>30€</div></div>
+        <div class="col-1"><div *ngFor = "let p of listaCompra">{{p.precio}}€</div></div>
         
       </div>
     
     <div class="row ">
         <div class="total col-9"><div>Total:</div></div>
-        <div class="total col-3"><div>300€</div></div>
+        <div class="total col-3"><div>{{sumarTotal()}}€</div></div>
       </div>
     </div>
     <div class="calcular row ">
-        <div class="calc col-12"><div>Reiniciar Pedido</div></div>
+        <div (click) = "handleClick()" class="calc col-12"><div>Quitar</div></div>
       </div>
   </div>
 

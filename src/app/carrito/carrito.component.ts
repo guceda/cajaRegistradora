@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -8,10 +8,22 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class CarritoComponent implements OnInit {
   @Input()listaCompra:any
-  constructor() { }
-
+  @Output()onBorrar: EventEmitter<any>
+  constructor() {
+    this.onBorrar = new EventEmitter()
+   }
   ngOnInit() {
   }
- 
-
+  sumarTotal(){
+    let suma = 0
+    for (let i = 0; i < this.listaCompra.length; i++) {
+      suma += parseInt(this.listaCompra[i].precio)
+    }
+    return suma
+  }
+  handleClick(){
+    console.log('click para borrar');
+    this.onBorrar.emit('emitiendo para borrar')
+    
+  }
 }

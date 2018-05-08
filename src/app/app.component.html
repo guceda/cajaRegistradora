@@ -6,7 +6,7 @@
             <app-lista-productos  (onSend) = "handleOnSend($event)" [productos]="bebida" titulo="¿Y de bebida?"></app-lista-productos>
             <app-lista-productos  (onSend) = "handleOnSend($event)" [productos]="postre" titulo="Nuestros postres"></app-lista-productos>
         </div>
-        <app-carrito [listaCompra] = "listaProductos"></app-carrito>
+        <app-carrito (onBorrar) = "handleOnBorrar($event)" [listaCompra] = "listaProductos"></app-carrito>
     </div>
 </div>
 <app-footer></app-footer>

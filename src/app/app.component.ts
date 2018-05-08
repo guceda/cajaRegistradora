@@ -53,5 +53,8 @@ export class AppComponent {
     this.listaProductos.push($event)
     console.log(this.listaProductos);
   }
-  
+  handleOnBorrar($event){
+    this.listaProductos.splice((this.listaProductos.length-1),1)
+    console.log(this.listaProductos)  
+  }
 }

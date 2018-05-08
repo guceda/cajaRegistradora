@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Producto } from '../classProducto';
 
 @Component({
@@ -19,8 +19,8 @@ export class ProductoComponent implements OnInit {
   ngOnInit() {
   }
   handleClick(objeto) {
-    this.carrito.push(objeto)
-    this.onSend.emit(this.carrito)
+    
+    this.onSend.emit(this)
    
   }
   

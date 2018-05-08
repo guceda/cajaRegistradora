@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import Producto from '../classProducto';
+import { Producto } from '../classProducto';
 
 
 @Component({
@@ -16,7 +16,7 @@ export class ListaProductosComponent implements OnInit {
   }
 
   ngOnInit() { 
-    console.log(this.Arrays); 
+    console.log(this.productos); 
   }
   handleOnSend($event){
     console.log('se han enviado los datos')

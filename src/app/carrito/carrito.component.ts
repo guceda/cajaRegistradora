@@ -7,6 +7,7 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./carrito.component.css']
 })
 export class CarritoComponent implements OnInit {
+  @Input()listaCompra:any
   constructor() { }
 
   ngOnInit() {

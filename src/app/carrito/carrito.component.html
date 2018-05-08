@@ -5,7 +5,7 @@
       
     </div>
     <div class="producto1 row justify-content-between">
-        <div class="col-3"><div>pedido</div></div>
+        <div class="col-3"><div *ngFor = "let p of listaCompra">{{p.nombre}}</div></div>
         <div class="col-1"><div>30€</div></div>
         
       </div>
@@ -19,3 +19,4 @@
         <div class="calc col-12"><div>Reiniciar Pedido</div></div>
       </div>
   </div>
+

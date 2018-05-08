@@ -1,0 +1,9 @@
+
+.comida .col-12 div {
+    height: 50px; 
+    margin: 60px auto 60px auto;
+    line-height: 50px;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 40px; 
+}

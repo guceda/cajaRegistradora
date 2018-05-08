@@ -1,0 +1,92 @@
+
+.pedido{
+    height: 50px; 
+    color: rgb(255, 217, 0);
+    line-height: 50px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 170%;
+}
+
+
+
+.producto1{
+    padding: 20px 10px;
+    height: 150px;
+    margin-bottom: 20px;
+    font-size: 90%;
+    font-weight: 600;
+    overflow: scroll;
+}
+
+.producto1 div{
+    padding: 0 10px;
+}
+.producto1 div:last-child{
+    padding-right: 50px;
+}
+
+.total{
+    font-weight: 900;
+    font-size: 110%;
+    padding: 10px;
+    text-align: right;
+}
+
+.total div:last-child{
+    padding-right: 10px;
+}
+
+.carrito{
+
+    position: fixed;
+    width:300px;
+    right: 20px;
+    -webkit-box-shadow: 10px 10px 77px -6px rgba(0,0,0,0.2);
+    -moz-box-shadow: 10px 10px 77px -6px rgba(0,0,0,0.2);
+     box-shadow: 10px 10px 77px -6px rgba(0,0,0,0.2);
+     border-radius: 10px;
+}
+
+.calcular{
+
+    position: fixed;
+    width:300px;
+    right: 35px;
+    top: 767px;   
+}
+
+
+.calc{
+    background:rgb(93,189,186);
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    font-size: 110%;
+    border-radius: 50px;
+}
+
+.calc:hover{
+    opacity: 0.7;
+}
+
+
+.quitar div{
+    color: rgba(211,211,211,0.9);
+    font-size: 90%;
+    cursor: pointer;
+}
+
+.quitar div:hover{
+   color: rgb(93,189,186);
+    
+}
+
+.precio {
+    font-weight: 400;
+    padding: 10px;
+    text-align: right; 
+}

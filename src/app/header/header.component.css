@@ -1,0 +1,14 @@
+/* HEADER */
+.cabecera div{
+    height: 450px; 
+    background-color: rgb(93,189,186);
+    line-height: 450px;
+    margin-bottom: 40px;
+    font-size: 50px;
+    padding: 0 40px;
+    color: white;
+}
+.logo{
+    opacity: 0.8;
+  
+}

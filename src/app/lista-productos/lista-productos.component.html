@@ -1,0 +1,11 @@
+<div class="comida row ">
+  <div class="col-12">
+    <div>{{titulo}}</div>
+  </div>
+</div>
+<div class="prod row">
+  <app-producto (onSend) = "handleOnSend($event)" *ngFor="let producto of productos" [producto] = "producto"  ></app-producto>
+</div>
+<div class="prod row">
+</div>
+

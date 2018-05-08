@@ -11,15 +11,16 @@ export class ListaProductosComponent implements OnInit {
 
   @Input()titulo:String
   @Input()productos:any
+  @Output()onSend: EventEmitter<any>
 
   constructor() { 
+    this.onSend = new EventEmitter()
   }
 
   ngOnInit() { 
-    console.log(this.productos); 
   }
+
   handleOnSend($event){
-    console.log('se han enviado los datos')
+    this.onSend.emit($event)
   }
- 
 }

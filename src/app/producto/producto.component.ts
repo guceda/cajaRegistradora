@@ -12,17 +12,14 @@ export class ProductoComponent implements OnInit {
   @Output()onSend: EventEmitter<any>
 
 
-
-  constructor() { 
+  constructor() {
     this.onSend = new EventEmitter()
   }
   ngOnInit() {
   }
-  handleClick(objeto) {
-    
-    this.onSend.emit(this)
-   
+
+  handleClick(producto) {
+    this.onSend.emit(producto)
   }
-  
 }
 

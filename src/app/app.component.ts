@@ -13,6 +13,8 @@ export class AppComponent {
   comida: Array<any>
   bebida: Array<any>
   postre: Array<any>
+
+  listaProductos:Array<any>
   
   constructor() {
     this.comida = [
@@ -45,6 +47,11 @@ export class AppComponent {
       new Producto('caramelo', '3', '🍬', 'bebida'),
       // [new Producto('cookie', '4', '🍪', 'bebida')]
     ]
+    this.listaProductos = []
+  }
+  handleOnSend($event){
+    this.listaProductos.push($event)
+    console.log(this.listaProductos);
   }
   
 }

@@ -1,60 +1,55 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Producto } from '../app/classProducto';
+import { PRODUCTOS } from './productos.db'
+import { ProductosService } from './productos.service';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [ProductosService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'app';
 
   comida: Array<any>
   bebida: Array<any>
   postre: Array<any>
+  listaProductos: Array<any>
 
-  listaProductos:Array<any>
-  
-  constructor() {
-    this.comida = [
-      new Producto('uva', '4', '🍇', 'comida'),
-      new Producto('melón', '4', '🍈', 'comida'),
-      new Producto('sandía', '2', '🍉', 'comida'),
-      new Producto('cereza', '9', '🍒', 'comida'),
-      new Producto('aguacate', '12', '🥑', 'comida'),
-      new Producto('berengena', '5', '🍆', 'comida'),
-      new Producto('brocoli', '9', '🥦', 'comida'),
-      new Producto('seta', '3', '🍄', 'comida'),
-    ]
-    this.bebida = [
-      new Producto('ron', '12', '🥃', 'bebida'),
-      new Producto('cocacola', '2', '🥤', 'bebida'),
-      new Producto('cerveza', '9', '🍺', 'bebida'),
-      new Producto('cocktail', '30', '🍹', 'bebida'),
-      new Producto('café', '3', '☕', 'bebida'),
-      new Producto('leche', '1', '🥛', 'bebida'),
-      new Producto('té', '3', '🍵', 'bebida'),
-      new Producto('martini', '14', '🍸', 'bebida')
-    ]
-    this.postre = [
-      new Producto('chocolate', '5', '🍫', 'bebida'),
-      new Producto('tarta', '2', '🥧', 'bebida'),
-      new Producto('donut', '9', '🍩', 'bebida'),
-      new Producto('helado', '3', '🍨', 'bebida'),
-      new Producto('galleta', '3', '🥠', 'bebida'),
-      new Producto('flan', '2', '🍮', 'bebida'),
-      new Producto('caramelo', '3', '🍬', 'bebida'),
-      new Producto('cookie', '4', '🍪', 'bebida')
-    ]
+  constructor(private productosService: ProductosService) {
+    this.comida = []
+    this.bebida = []
+    this.postre = []
+
     this.listaProductos = []
   }
-  handleOnSend($event){
+  ngOnInit() {
+    //Recuperamos el array de Comidas de la Promesa
+    let promesaComida = this.productosService.getProductosByTipo('comida')
+    promesaComida.then((arrProductosComida) => {
+      this.comida = arrProductosComida
+    })
+    //Recuperamos el array de Bebidas de la Promesa
+    let promesaBebida = this.productosService.getProductosByTipo('bebida')
+    promesaBebida.then((arrProductosBebida) => {
+      this.bebida = arrProductosBebida
+    })
+    //Recuperamos el array de Postres de la Promesa
+    let promesaPostre = this.productosService.getProductosByTipo('postre')
+    promesaPostre.then((arrProductosPostre) => {
+      this.postre = arrProductosPostre
+    })
+
+  }
+  handleOnSend($event) {
     this.listaProductos.push($event)
     console.log(this.listaProductos);
   }
-  handleOnBorrar($event){
-    this.listaProductos.splice((this.listaProductos.length-1),1)
-    console.log(this.listaProductos)  
+  handleOnBorrar($event) {
+    this.listaProductos.splice((this.listaProductos.length - 1), 1)
+    console.log(this.listaProductos)
   }
+
 }

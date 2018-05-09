@@ -3,14 +3,15 @@ import { Producto } from './classProducto'
 //fichero almacena el array de productos
 
 export const PRODUCTOS:Array<Producto> = [
-          new Producto('uva', '4', '🍇', 'comida'),
-          new Producto('melón', '4', '🍈', 'comida'),
-          new Producto('sandía', '2', '🍉', 'comida'),
-          new Producto('cereza', '9', '🍒', 'comida'),
-          new Producto('aguacate', '12', '🥑', 'comida'),
-          new Producto('berengena', '5', '🍆', 'comida'),
-          new Producto('brocoli', '9', '🥦', 'comida'),
-          new Producto('seta', '3', '🍄', 'comida'),
+
+          new Producto('queso', '4', '🧀', 'comida'),
+          new Producto('carne', '4', '🍖', 'comida'),
+          new Producto('pollo', '2', '🍗', 'comida'),
+          new Producto('filete', '9', '🥩', 'comida'),
+          new Producto('hamburguesa', '12', '🍔', 'comida'),
+          new Producto('patatas', '5', '🍟', 'comida'),
+          new Producto('pizza', '9', '🍕', 'comida'),
+          new Producto('taco', '3', '🌮', 'comida'),
    
           new Producto('ron', '12', '🥃', 'bebida'),
           new Producto('cocacola', '2', '🥤', 'bebida'),
@@ -29,5 +30,14 @@ export const PRODUCTOS:Array<Producto> = [
           new Producto('flan', '2', '🍮', 'postre'),
           new Producto('caramelo', '3', '🍬', 'postre'),
           new Producto('cookie', '4', '🍪', 'postre'),
+
+          new Producto('limón', '4', '🍋', 'fruta'),
+          new Producto('melón', '4', '🍈', 'fruta'),
+          new Producto('sandía', '2', '🍉', 'fruta'),
+          new Producto('cereza', '9', '🍒', 'fruta'),
+          new Producto('uva', '12', '🍇', 'fruta'),
+          new Producto('melocotón', '5', '🍑', 'fruta'),
+          new Producto('coco', '9', '🥥', 'fruta'),
+          new Producto('presa', '3', '🍓', 'fruta'),
 ]
 
